@@ -1,0 +1,27 @@
+name:            rtmidi
+version:         0.1.1
+license:         MIT
+license-file:    LICENSE
+author:          Ulysses Popple <ulysses.popple@gmail.com>
+maintainer:      Ulysses Popple <ulysses.popple@gmail.com>
+synopsis:        Wrapper around RTMidi for realtime MIDI I/O
+-- description:     
+category:        Sound
+stability:       Experimental
+cabal-version:   >= 1.8
+build-type:      Simple
+-- homepage:        
+extra-source-files:
+  rtmidi/RtMidi.h
+  rtmidi/rtmidi_c.h
+  ChangeLog.md
+  README.md
+
+library
+    exposed-modules: Sound.RTMidi
+    build-depends:   base                  >= 4.6      && < 5
+    extensions: CPP, ForeignFunctionInterface
+
+source-repository head
+  type:     git
+  location: https://github.com/ulyssesp/rtmidi
